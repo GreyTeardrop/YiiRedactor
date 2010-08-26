@@ -49,7 +49,8 @@ class redactor extends CInputWidget
 			focus:   " . $this->focus . ",
 			resize:  " . $this->resize . ",
 			toolbar: '" . $this->toolbar . "',
-			upload:  '" . $this->upload . "'
+			upload:  '" . $this->upload . "',
+			path: '$assets',
 		});";
 		$cs->registerScript('Yii.' . get_class($this), $js);
 	}
