@@ -50,7 +50,7 @@ class redactor extends CInputWidget
 			resize:  " . $this->resize . ",
 			toolbar: '" . $this->toolbar . "',
 			upload:  '" . $this->upload . "',
-			path: '$assets',
+			path: '$assets/',
 		});";
 		$cs->registerScript('Yii.' . get_class($this), $js);
 	}
