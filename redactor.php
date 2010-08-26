@@ -39,7 +39,15 @@ class redactor extends CInputWidget
 		$cs = Yii::app()->getClientScript();
 		$cs->registerCssFile($assets . '/css/redactor.css');
 		$cs->registerCoreScript('jquery');
-		$cs->registerScriptFile($assets . '/redactor.js');
+		if (YII_DEBUG)
+		{
+			$scriptName = '/redactor.js';
+		}
+		else
+		{
+			$scriptName = '/redactor.min.js';
+		}
+		$cs->registerScriptFile($assets . $scriptName);
 
 		list($this->element['name'], $this->element['id']) = $this->resolveNameID();
 
